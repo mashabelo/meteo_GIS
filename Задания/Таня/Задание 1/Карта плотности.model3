@@ -1,0 +1,355 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="native:clip_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="native:clip" name="alg_id" type="QString"/>
+      <Option value="Обрезать" name="component_description" type="QString"/>
+      <Option value="344.2916666666666" name="component_pos_x" type="double"/>
+      <Option value="404.59166666666664" name="component_pos_y" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="native:dissolve_1" type="QString"/>
+        <Option value="native:extractbyexpression_1" type="QString"/>
+      </Option>
+      <Option value="native:clip_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Выбор метеостанций для ПФО" type="Map">
+          <Option value="native:clip_1" name="child_id" type="QString"/>
+          <Option value="Выбор метеостанций для ПФО" name="component_description" type="QString"/>
+          <Option value="454.84920312500003" name="component_pos_x" type="double"/>
+          <Option value="477.0344010416666" name="component_pos_y" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Выбор метеостанций для ПФО" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="2" name="parameter_name" type="QString"/>
+            <Option value="0" name="source" type="int"/>
+          </Option>
+        </Option>
+        <Option name="OVERLAY" type="List">
+          <Option type="Map">
+            <Option value="native:dissolve_1" name="child_id" type="QString"/>
+            <Option value="OUTPUT" name="output_name" type="QString"/>
+            <Option value="1" name="source" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:dissolve_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="native:dissolve" name="alg_id" type="QString"/>
+      <Option value="Объединение по признаку" name="component_description" type="QString"/>
+      <Option value="488.967903125" name="component_pos_x" type="double"/>
+      <Option value="277" name="component_pos_y" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="native:extractbyexpression_1" type="QString"/>
+      </Option>
+      <Option value="native:dissolve_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Объединение  в один округ" type="Map">
+          <Option value="native:dissolve_1" name="child_id" type="QString"/>
+          <Option value="Объединение  в один округ" name="component_description" type="QString"/>
+          <Option value="691" name="component_pos_x" type="double"/>
+          <Option value="277" name="component_pos_y" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Объединение  в один округ" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="ADM3_NAME" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="native:extractbyexpression_1" name="child_id" type="QString"/>
+            <Option value="OUTPUT" name="output_name" type="QString"/>
+            <Option value="1" name="source" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:extractbyexpression_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="native:extractbyexpression" name="alg_id" type="QString"/>
+      <Option value="Извлечь по выражению" name="component_description" type="QString"/>
+      <Option value="350" name="component_pos_x" type="double"/>
+      <Option value="183" name="component_pos_y" type="double"/>
+      <Option name="dependencies"/>
+      <Option value="native:extractbyexpression_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Выбор округа" type="Map">
+          <Option value="native:extractbyexpression_1" name="child_id" type="QString"/>
+          <Option value="Выбор округа" name="component_description" type="QString"/>
+          <Option value="552.8695994270834" name="component_pos_x" type="double"/>
+          <Option value="183.04294230902784" name="component_pos_y" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Выбор округа" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="EXPRESSION" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="&quot;ADM3_NAME&quot; = 'Приволжский федеральный округ'" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="" name="parameter_name" type="QString"/>
+            <Option value="0" name="source" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:reprojectlayer_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="native:reprojectlayer" name="alg_id" type="QString"/>
+      <Option value="Перепроектировать слой" name="component_description" type="QString"/>
+      <Option value="825.5310937500001" name="component_pos_x" type="double"/>
+      <Option value="344.60671770833335" name="component_pos_y" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="native:clip_1" type="QString"/>
+        <Option value="native:dissolve_1" type="QString"/>
+        <Option value="native:extractbyexpression_1" type="QString"/>
+      </Option>
+      <Option value="native:reprojectlayer_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Перепроектированный слой (зона 39)" type="Map">
+          <Option value="native:reprojectlayer_1" name="child_id" type="QString"/>
+          <Option value="Перепроектированный слой (зона 39)" name="component_description" type="QString"/>
+          <Option value="938.1286120833332" name="component_pos_x" type="double"/>
+          <Option value="310.9175441840279" name="component_pos_y" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Перепроектированный слой (зона 39)" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="native:clip_1" name="child_id" type="QString"/>
+            <Option value="OUTPUT" name="output_name" type="QString"/>
+            <Option value="1" name="source" type="int"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_CRS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
+              <spatialrefsys>
+                <proj4>+proj=utm +zone=39 +ellps=WGS72 +towgs84=0,0,4.5,0,0,0.554,0.2263 +units=m +no_defs</proj4>
+                <srsid>2883</srsid>
+                <srid>32239</srid>
+                <authid>EPSG:32239</authid>
+                <description>WGS 72 / UTM zone 39N</description>
+                <projectionacronym>utm</projectionacronym>
+                <ellipsoidacronym>WGS72</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+              </spatialrefsys>
+            </Option>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:heatmapkerneldensityestimation_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="qgis:heatmapkerneldensityestimation" name="alg_id" type="QString"/>
+      <Option value="Heatmap (Kernel Density Estimation)" name="component_description" type="QString"/>
+      <Option value="853.8862749999998" name="component_pos_x" type="double"/>
+      <Option value="423.28780416666666" name="component_pos_y" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="native:clip_1" type="QString"/>
+        <Option value="native:dissolve_1" type="QString"/>
+        <Option value="native:extractbyexpression_1" type="QString"/>
+        <Option value="native:reprojectlayer_1" type="QString"/>
+      </Option>
+      <Option value="qgis:heatmapkerneldensityestimation_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Карта плотности станций" type="Map">
+          <Option value="qgis:heatmapkerneldensityestimation_1" name="child_id" type="QString"/>
+          <Option value="Карта плотности станций" name="component_description" type="QString"/>
+          <Option value="952.9954957465278" name="component_pos_x" type="double"/>
+          <Option value="482.4410569965279" name="component_pos_y" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Карта плотности станций" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DECAY" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="0" name="static_value" type="double"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="native:reprojectlayer_1" name="child_id" type="QString"/>
+            <Option value="OUTPUT" name="output_name" type="QString"/>
+            <Option value="1" name="source" type="int"/>
+          </Option>
+        </Option>
+        <Option name="KERNEL" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="0" name="static_value" type="int"/>
+          </Option>
+        </Option>
+        <Option name="OUTPUT_VALUE" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="0" name="static_value" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PIXEL_SIZE" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="3000.1" name="static_value" type="double"/>
+          </Option>
+        </Option>
+        <Option name="RADIUS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="100000" name="static_value" type="double"/>
+          </Option>
+        </Option>
+        <Option name="RADIUS_FIELD" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="WEIGHT_FIELD" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option value="" name="model_group" type="QString"/>
+  <Option value="Карта плотности" name="model_name" type="QString"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="5" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option value="Регионы России" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="" name="name" type="QString"/>
+      <Option value="source" name="parameter_type" type="QString"/>
+    </Option>
+    <Option name="2" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="5" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option value="Метео станции" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="2" name="name" type="QString"/>
+      <Option value="source" name="parameter_type" type="QString"/>
+    </Option>
+    <Option name="native:clip_1:Выбор метеостанций для ПФО" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="-1" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option value="Выбор метеостанций для ПФО" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="native:clip_1:Выбор метеостанций для ПФО" name="name" type="QString"/>
+      <Option value="sink" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="native:dissolve_1:Объединение  в один округ" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="-1" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option value="Объединение  в один округ" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="native:dissolve_1:Объединение  в один округ" name="name" type="QString"/>
+      <Option value="sink" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="native:extractbyexpression_1:Выбор округа" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="-1" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option value="Выбор округа" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="native:extractbyexpression_1:Выбор округа" name="name" type="QString"/>
+      <Option value="sink" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="native:reprojectlayer_1:Перепроектированный слой (зона 39)" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="-1" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option value="Перепроектированный слой (зона 39)" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="native:reprojectlayer_1:Перепроектированный слой (зона 39)" name="name" type="QString"/>
+      <Option value="sink" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="qgis:heatmapkerneldensityestimation_1:Карта плотности станций" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option name="default" type="invalid"/>
+      <Option value="Карта плотности станций" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option name="metadata"/>
+      <Option value="qgis:heatmapkerneldensityestimation_1:Карта плотности станций" name="name" type="QString"/>
+      <Option value="rasterDestination" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="" type="Map">
+      <Option value="" name="component_description" type="QString"/>
+      <Option value="227" name="component_pos_x" type="double"/>
+      <Option value="108" name="component_pos_y" type="double"/>
+      <Option value="" name="name" type="QString"/>
+    </Option>
+    <Option name="2" type="Map">
+      <Option value="2" name="component_description" type="QString"/>
+      <Option value="218.9" name="component_pos_x" type="double"/>
+      <Option value="243.9583333333333" name="component_pos_y" type="double"/>
+      <Option value="2" name="name" type="QString"/>
+    </Option>
+  </Option>
+</Option>
